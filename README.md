@@ -1,5 +1,9 @@
+
+
 # nWays
-There are many ways to write a code for a particular task. This project starts with (may be updated) 35 ways to generate Fibonacci sequence in Python, includes using list, tuple, generator, etc., and some examples from www.rosettacode.org, the others are original.
+
+
+There are many ways to write a code for a particular task. This project starts with (may be updated) 35 ways to generate Fibonacci sequence in Python, includes using list, tuple, generator, etc., and few outsource examples from www.rosettacode.org, the others are from the author.
 
 `n_fibo_ways.py` consists of 35 different functions that generate the same Fibonacci numbers. To see the results, simply run it. `F.show_all(m)` will show 35 same results of first m Fibonacci numbers calculation.
 
