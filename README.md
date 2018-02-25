@@ -9,7 +9,7 @@ There are many ways to write a code for a particular task. This project starts w
 
 E-mail: anbarief@live.com
 
-## (35 Fibo numbers) Manifestation:
+## (35 functions that perform Fibo numbers) Manifestation:
 
 Function:
 
