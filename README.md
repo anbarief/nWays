@@ -16,7 +16,7 @@ def fibo_1(n):
    
 
 
-```python Generate Fibonacci sequence using for loop and list. In each iteration the initial list append the sum of its last two elements.
+```Generate Fibonacci sequence using for loop and list. In each iteration the initial list append the sum of its last two elements.
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]```
 
 
