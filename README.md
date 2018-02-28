@@ -9,9 +9,11 @@ E-mail: anbarief@live.com
 
 ## F
  Fibonacci Numbers Generation
+ [(n_fibo_ways.py)](https://github.com/anbarief/nWays/blob/master/n_fibo_ways.py)
  
 ## R
 Random Sampling without Replacement
+[(n_random_sampling.py)](https://github.com/anbarief/nWays/blob/master/n_random_sampling.py)
 
 -----
 
