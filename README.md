@@ -17,13 +17,14 @@ Random Sampling without Replacement
 
 -----
 
+## A Manifestation
 
 ## (35 functions that perform Fibo numbers):
 `n_fibo_ways.py` consists of 35 different functions that generate the same Fibonacci numbers. To see the results, simply run it. `F.show_all(m)` will show 35 same results of first m Fibonacci numbers calculation.
 
 
+### Examples:
 
-## Manifestation:
 
 Function:
 
