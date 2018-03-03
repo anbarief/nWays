@@ -4,6 +4,8 @@
 
 There are many ways to write a code for a particular task. This project starts with (may be updated) 35 ways to generate Fibonacci sequence in Python, includes using list, tuple, generator, etc., and few outsource examples from www.rosettacode.org. This is followed by another task, random sampling, (may also be updated) 20 ways to random sampling from a set of data. 
 
+Currently written in Python or Matlab.
+
 E-mail: anbarief@live.com
 
 -----
@@ -13,7 +15,8 @@ E-mail: anbarief@live.com
 ## F
  Fibonacci Numbers Generation
  [(n_fibo_ways.py)](https://github.com/anbarief/nWays/blob/master/n_fibo_ways.py)
- 
+ [(n_fibo_ways.m)](https://github.com/anbarief/nWays/blob/master/n_fibo_ways.m)
+
 ## R
 Random Sampling without Replacement
 [(n_random_sampling.py)](https://github.com/anbarief/nWays/blob/master/n_random_sampling.py)
