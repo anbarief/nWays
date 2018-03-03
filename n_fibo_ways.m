@@ -1,3 +1,6 @@
+# Started since 3 Mar, 2018
+# Author : anbarief@live.com
+
 ex_1='1. Using Fibonacci function in a for-loop.';
 disp(ex_1)
 disp(fibo_1(16))
