@@ -16,6 +16,7 @@ E-mail: anbarief@live.com
  Fibonacci Numbers Generation
  [(n_fibo_ways.py)](https://github.com/anbarief/nWays/blob/master/n_fibo_ways.py)
  [(n_fibo_ways.m)](https://github.com/anbarief/nWays/blob/master/n_fibo_ways.m)
+ [(n_fibo_ways.cpp)](https://github.com/anbarief/nWays/blob/master/n_fibo_ways.cpp)
 
 ## R
 Random Sampling without Replacement
