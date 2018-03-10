@@ -18,9 +18,13 @@ E-mail: anbarief@live.com
  [(n_fibo_ways.m)](https://github.com/anbarief/nWays/blob/master/n_fibo_ways.m)
  [(n_fibo_ways.cpp)](https://github.com/anbarief/nWays/blob/master/n_fibo_ways.cpp)
 
+## M
+ Maximum Value
+ [(n_max.cpp)](https://github.com/anbarief/nWays/blob/master/n_max.cpp)
+ 
 ## R
-Random Sampling without Replacement
-[(n_random_sampling.py)](https://github.com/anbarief/nWays/blob/master/n_random_sampling.py)
+ Random Sampling without Replacement
+ [(n_random_sampling.py)](https://github.com/anbarief/nWays/blob/master/n_random_sampling.py)
 
 -----
 
