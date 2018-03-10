@@ -52,10 +52,12 @@ float max_4(float x[], int sizex){
 		max = x[sizex-1];
 	};
 	
-	for (int index=1; index < sizex; index++){
+	int mid=(sizex+(sizex%2))/2;
+	
+	for (int index=1; index < mid; index++){
 		
-		if (x[sizex-index] >= x[index]) {
-		maxx = x[sizex-index];
+		if (x[sizex-index-1] >= x[index]) {
+		maxx = x[sizex-index-1];
 		}
 		else {
 		maxx = x[index];
@@ -68,7 +70,7 @@ float max_4(float x[], int sizex){
 			maxxx = max;
 		}
 		
-		max = maxx;
+		max = maxxx;
 	
 	}
 	return maxxx;
@@ -85,11 +87,12 @@ float max_5(float x[], int sizex){
 	};
 	
 	int index = 1;
+	int mid=(sizex+(sizex%2))/2;
 	
-	while(index < sizex){
+	while(index < mid){
 		
-		if (x[sizex-index] >= x[index]) {
-		maxx = x[sizex-index];
+		if (x[sizex-index-1] >= x[index]) {
+		maxx = x[sizex-index-1];
 		}
 		else {
 		maxx = x[index];
@@ -102,7 +105,7 @@ float max_5(float x[], int sizex){
 			maxxx = max;
 		}
 		
-		max = maxx;
+		max = maxxx;
 	    
 	    index=index+1;
 	}
