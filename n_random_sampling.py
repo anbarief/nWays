@@ -241,7 +241,7 @@ def sampling_20(data, n=10):
     data=copy.deepcopy(data);
     sample=[];
     for i in range(n):
-        if (-1)^(i)==1:
+        if (-1)**(i)==1:
             rand=random.sample(data,1);
         else:
             rand=random.choice(data);
