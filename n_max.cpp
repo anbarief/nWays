@@ -9,7 +9,7 @@
 
 float max_1(float x[], int sizex){
 	float max = x[0];
-	for (int index=0; index < sizex; index++){
+	for (int index=1; index < sizex; index++){
 		if (x[index] >= max) {
 		max = x[index];
 		}
@@ -19,21 +19,21 @@ float max_1(float x[], int sizex){
 
 float max_2(float x[], int sizex){
 	float max;
-	for (int index=0; index < sizex; index++){
-		if (x[index+1] >= x[index]) {
-		max = x[index+1];
-		}
-		else {
+	for (int index=1; index < sizex; index++){
+		if (x[index] >= x[index-1]){
 		max = x[index];
 		}
-		x[index+1]=max;
+		else {
+		max = x[index-1];
+		}
+		x[index]=max;
 	}
 	return max;
 }
 
 float max_3(float x[], int sizex){
 	float max = x[0];
-    int index=0; 
+    int index=1; 
 	while (index < sizex)
 	{
     	if (x[index] >= max) {
@@ -172,8 +172,66 @@ float max_9(float x[], int sizex){
 	
 	std::vector<float> v(x, x+sizex);
 	
-        return	*std::max_element(v.begin(), v.end());
+    return	*std::max_element(v.begin(), v.end());
 
+}
+
+float max_10(float x[], int sizex){
+	
+    return	*std::max_element(x, x+sizex);
+
+}
+
+float max_11(float x[], int sizex){
+
+	float max = x[0];
+
+	std::vector<float> v(x, x+sizex);
+
+	for (std::vector<float>::iterator it = v.begin(); it != v.end(); it++){
+		
+		if (*it >= max){
+			max = *it;
+		}
+		
+	}
+	return max;
+}
+
+float max_12(float x[], int sizex){
+
+	float max = x[0];
+
+	std::vector<float> v(x, x+sizex);
+
+	for (int index=1; index < sizex; index++){
+		
+		if (x[index] >= max){
+			max = x[index];
+		}
+		
+	}
+	
+	return max;
+}
+
+float max_13(float x[], int sizex){
+
+	float max;
+
+	std::vector<float> v(x, x+sizex);
+
+	for (int index = 1; index < sizex; index++){
+	
+		if (v[index] >= v[index-1]){
+			max = v[index];
+		}
+		else{
+			max = v[index-1];
+		}
+	}
+	
+	return max;
 }
 
 
@@ -217,6 +275,22 @@ int main(){
 	std::string ex_9 = "max_9 : Using the max_element function from algorithm library.";
 	std::cout << '\n' << ex_9;
 	std::cout << '\n' << max_9(data, n);
+	
+	std::string ex_10 = "max_10 : Similar as max_9, but with different way on the arguments.";
+	std::cout << '\n' << ex_10;
+	std::cout << '\n' << max_10(data, n);
+	
+	std::string ex_11 = "max_11 : Similar as max_1, but using iterator on vector in a for-loop.";
+	std::cout << '\n' << ex_11;
+	std::cout << '\n' << max_11(data, n);
+	
+	std::string ex_12 = "max_12 : Similar as max_1, but using vector instead of array.";
+	std::cout << '\n' << ex_12;
+	std::cout << '\n' << max_12(data, n);
+	
+	std::string ex_13 = "max_13 : Similar as max_2, but using iterator on vector in a for-loop.";
+	std::cout << '\n' << ex_13;
+	std::cout << '\n' << max_13(data, n);
 	
 	return 0;
 }
