@@ -3,7 +3,9 @@
 
 #include <iostream>
 #include <string>
-
+#include <algorithm>
+#include <iterator>
+#include <vector>
 
 float max_1(float x[], int sizex){
 	float max = x[0];
@@ -52,7 +54,7 @@ float max_4(float x[], int sizex){
 		max = x[sizex-1];
 	};
 	
-	int mid=(sizex+(sizex%2))/2;
+	int mid = (sizex + (sizex%2))/2;
 	
 	for (int index=1; index < mid; index++){
 		
@@ -87,7 +89,7 @@ float max_5(float x[], int sizex){
 	};
 	
 	int index = 1;
-	int mid=(sizex+(sizex%2))/2;
+	int mid = (sizex+(sizex%2))/2;
 	
 	while(index < mid){
 		
@@ -116,26 +118,70 @@ float max_6(float x[], int sizex){
 	
 	float max;
 	
-	if (x[sizex]>=x[sizex-1]){
-		max=x[sizex];
+	if (x[sizex-1]>=x[sizex-2]){
+		max=x[sizex-1];
 	} 
 	else{
-		max=x[sizex-1];
+		max=x[sizex-2];
 	};
 	
 	if (sizex == 1){
 	return max;
 	};
 	
-	x[sizex-1] = max;
+	x[sizex-2] = max;
 
 	return max_6(x, sizex-1);
 }
 
+float max_7(float x[], int sizex, int index=0){
+	
+	float max;
+	
+	if (x[index+1]>=x[index]){
+		max=x[index+1];
+	} 
+	else{
+		max=x[index];
+	};
+	
+	if (index==sizex-2){
+	return max;
+	};
+	
+	x[index+1]=max;
+    
+	return max_7(x, sizex, index+1);
+}
+
+float max_8(float x[], int sizex){
+	
+	float max;
+	
+	for (int index=1; index < sizex; index++){
+		
+		max = std::max(x[index], x[index-1]);
+		x[index-1] = max;
+		
+	}
+	
+	return max;
+}
+
+float max_9(float x[], int sizex){
+	
+	std::vector<float> v(x, x+sizex);
+	
+        return	*std::max_element(v.begin(), v.end());
+
+}
+
+float max_10(
+
 
 int main(){
 	
-	float data[] {1, 1, 2, -2, -2233, -112.3, 3, 3, 3, 4.123, 1, 44.234, 2.0013, 3, 5, 5, 6, 6, 3, 56, 112, 112, 112.3, 12, 3};
+	float data[] {1, 1, 2, -2, -2233, -112.3, 3233, 3, 3, 4.123, 1, 44.234, 2.0013, 3, 5, 5, 6, 6, 3, 56, 112, 112, 112.3, 12, 3};
 	const int n = sizeof(data)/sizeof(*data);
 	
 	std::string ex_1 = "max_1 : Comparing per-element in a for-loop to get the maximum val.";
@@ -161,6 +207,18 @@ int main(){
 	std::string ex_6 = "max_6 : Using a recursive method to find the maximum.";
 	std::cout << '\n' << ex_6;
 	std::cout << '\n' << max_6(data, n);
+	
+	std::string ex_7= "max_7 : Similar as max_6, but starts from index 0.";
+	std::cout << '\n' << ex_7;
+	std::cout << '\n' << max_7(data, n);
+	
+	std::string ex_8 = "max_8 : Using the max function from algorithm library.";
+	std::cout << '\n' << ex_8;
+	std::cout << '\n' << max_8(data, n);
+	
+	std::string ex_9 = "max_9 : Using the max_element function from algorithm library.";
+	std::cout << '\n' << ex_9;
+	std::cout << '\n' << max_9(data, n);
 	
 	return 0;
 }
