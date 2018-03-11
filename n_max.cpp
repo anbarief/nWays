@@ -176,8 +176,6 @@ float max_9(float x[], int sizex){
 
 }
 
-float max_10(
-
 
 int main(){
 	
