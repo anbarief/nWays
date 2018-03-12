@@ -207,108 +207,9 @@ def fibo_21(n):
      for i in range(2,n)};
     return fstr
 
-ex_22 = "22. (the fibGen function from www.rosettacode.org) Using generator \
-to generate Fibonacci numbers, then use list comprehension.";
-def fibo_22(n):
-    def fibGen(n):
-        a, b = 0, 1
-        while n>0:
-           yield a
-           a, b, n = b, a+b, n-1
-    return [i for i in fibGen(n)]
-    
-ex_23 = "23. (the fibRec function from www.rosettacode.org) Using recursive \
-method generate Fibonacci number, then use list comprehension.";
-def fibo_23(n):
-    def fibRec(n):
-        if n < 2:
-            return n
-        else:
-            return fibRec(n-1) + fibRec(n-2)
-    return [fibRec(i) for i in range(0,n)]
-
-ex_24 = "24. (Hacked the fibRec function from www.rosettacode.org) Using recursive \
-method generate Fibonacci number and list.";
-def fibo_24(n):
-    f=[]; 
-    def fibRec(n):
-        if n < 2:
-            if len(f)==n:
-               f.append(n);
-            return n
-        else:
-            if len(f)==n:
-                f1=fibRec(n-2);
-                f2=fibRec(n-1);
-                f.append(f1+f2);
-            else:
-                f1=fibRec(n-2);
-                f2=fibRec(n-1);
-            return f1 + f2
-    fibRec(n)
-    f.append(f[-1]+f[-2]);
-    return f
-
-ex_25 = "25. (The fibIter function from www.rosettacode.org) Using iteration \
-method to generate Fibonacci number, then collect many using list comprehension.";
-def fibo_25(n):
-    def fibIter(n):
-        if n < 2:
-            return n
-        fibPrev = 1;
-        fib = 1;
-        for num in range(2, n):
-            fibPrev, fib = fib, fib + fibPrev
-        return fib
-    return [fibIter(i) for i in range(n)]
-
-ex_26 = "26. (Hacked the fibIter function from www.rosettacode.org) Using iteration \
-method to generate Fibonacci number, while using append(Fibo number) at each loop.";
-def fibo_26(n):
-    f=[];
-    def fibIter(n):
-        if n < 2:
-            f=list(range(0,n+1));
-            return f
-        fibPrev = 0;
-        fib = 1;
-        f=[0,1];
-        for num in range(2, n):
-            fibPrev, fib, = fib, fib + fibPrev
-            f.append(fib);
-        return f
-    return fibIter(n)
-
-ex_27 = "27. (The fibFastRec function from www.rosettacode.org) Using recursive \
-method to generate Fibonacci number, then use list comprehension to collect Fibo numbers.";
-def fibo_27(n):
-    def fibFastRec(n):
-        def fib(prvprv, prv, c):
-            if c < 1: 
-                return prvprv
-            else: 
-                return fib(prv, prvprv + prv, c - 1) 
-        return fib(0, 1, n)
-    return [fibFastRec(i) for i in range(n)]
-
-ex_28 = "28. (Hacked the fibFastRec function from www.rosettacode.org) Using recursive \
-method to generate Fibonacci number, while use using list.append in the process.";
-def fibo_28(n):
-    f=[0,1];
-    def fibFastRec(n):
-        def fib(prvprv, prv, c):
-            if c < 3: 
-                return prvprv
-            else: 
-                f.append(prvprv + prv);
-                return fib(prv, prvprv + prv, c - 1) 
-        return fib(0, 1, n)
-    fibFastRec(n);
-    return f
-
-ex_29 = "29. Using string to generate Fibonacci sequence. \
+ex_22= "22. Using string to generate Fibonacci sequence. \
 It uses string.find and string.format in such a way.";
-def fibo_29(n):
+def fibo_22(n):
     f="0-1";
     idx=0;
     for i in range(2,n):
@@ -321,15 +222,15 @@ def fibo_29(n):
            idx=idxnew;
     return f
  
-ex_30 = "30. Using tuple and a for-loop to generate Fibonacci sequence.";
-def fibo_30(n):
+ex_23 = "23. Using tuple and a for-loop to generate Fibonacci sequence.";
+def fibo_23(n):
     f=(0,1);
     for i in range(2,n):
         f=f+(f[-1]+f[-2],)
     return f
     
-ex_31 = "31. Fibonacci sequence using fibonacci sequence sum-formula.";
-def fibo_31(n, initial=[0,1]):
+ex_24 = "24. Fibonacci sequence using fibonacci sequence sum-formula.";
+def fibo_24(n, initial=[0,1]):
     f=list(initial);
     if len(f)>2:
         res = sum(f[1:-1])+f[0]+f[1];
@@ -341,33 +242,33 @@ def fibo_31(n, initial=[0,1]):
     else:
         return fibo_31(n, f)
        
-ex_32 = "32. Fibonacci sequence using it's analytic formula and list."
-def fibo_32(n):
+ex_25 = "25. Fibonacci sequence using it's analytic formula and list."
+def fibo_25(n):
     r1=1+math.sqrt(5);
     r2=1-math.sqrt(5);
     sfive=math.sqrt(5);
     f=[round((1/sfive)*((r1/2))**i - (1/sfive)*((r2/2))**i) for i in range(0, n)];
     return f
     
-ex_33 = "33. Fibonacci sequence using \
+ex_26 = "26. Fibonacci sequence using \
 it's analytic formula and dictionary comprehension."
-def fibo_33(n):
+def fibo_26(n):
     r1=1+math.sqrt(5);
     r2=1-math.sqrt(5);
     sfive=math.sqrt(5);
     f={i: round((1/sfive)*((r1/2))**i - (1/sfive)*((r2/2))**i) for i in range(0, n)};
     return f
    
-ex_34 = "34. Fibonacci sequence using it's analytic formula and using map"
-def fibo_34(n):
+ex_27 = "27. Fibonacci sequence using it's analytic formula and using map"
+def fibo_27(n):
     r1=1+math.sqrt(5);
     r2=1-math.sqrt(5);
     sfive=math.sqrt(5);
     f=list(map(lambda x: round((1/sfive)*((r1/2))**x - (1/sfive)*((r2/2))**x), range(0, n)));
     return f
 
-ex_35 = "35. Generate Fibonacci sequence using matrix form."
-def fibo_35(n):
+ex_28 = "28. Generate Fibonacci sequence using matrix form."
+def fibo_28(n):
     def dot(u,v):
         return sum([i*j for i,j in zip(u,v)]);
     def fibMat(n):
@@ -388,8 +289,8 @@ def fibo_35(n):
 
 class FiboWays:
     def __init__(self):
-        self.funcs=tuple([eval("fibo_{}".format(i)) for i in range(1,36)]);
-        self.func_desc=tuple([eval("ex_{}".format(i)) for i in range(1,36)]);
+        self.funcs=tuple([eval("fibo_{}".format(i)) for i in range(1, 29)]);
+        self.func_desc=tuple([eval("ex_{}".format(i)) for i in range(1, 29)]);
     def call_function(self, number, n):
         return self.funcs[number](n);
     def show_all(self, n=10):
