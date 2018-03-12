@@ -2,7 +2,7 @@
 
 
 
-There are many ways to write a code for a particular task. This project starts with (may be updated) 35 ways to generate Fibonacci sequence in Python, includes using list, tuple, generator, etc. This is followed by another task, random sampling, (may also be updated) 20 ways to random sampling from a set of data. 
+There are many ways to write a code for a particular task. This project starts with (may be updated) 28 ways to generate Fibonacci sequence in Python, includes using list, tuple, generator, etc. This is followed by another task, random sampling, (may also be updated) 20 ways to random sampling from a set of data. 
 
 *Currently written in Python, Matlab, or C++. (Looking forward for contributions in Java)
 
