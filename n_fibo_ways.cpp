@@ -255,9 +255,8 @@ void fibo_11(int n){
 	for (int index=2; index<n; index++){
 		
 		std::cout << "-" << fibo_rosetta_2(index);
-		
-	}
 	
+	}
 }
 
 int main(){
@@ -302,11 +301,11 @@ int main(){
 	
 	std::string ex_10 = "fibo_10 : Using an outsource function, fibonacci, from www.rosettacode.org, renamed as fibo_rosetta.";
 	std::cout << '\n' << ex_10 << '\n';
-    fibo_10(n);
+        fibo_10(n);
 	
 	std::string ex_11 = "fibo_11 : Using another different outsource function, fibonacci, from www.rosettacode.org, renamed as fibo_rosetta_2.";
 	std::cout << '\n' << ex_11 << '\n';
-    fibo_11(n);
+        fibo_11(n);
 		
 	return 0;
 }
