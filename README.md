@@ -2,7 +2,7 @@
 
 
 
-There are many ways to write a code for a particular task. This project starts with (may be updated) 35 ways to generate Fibonacci sequence in Python, includes using list, tuple, generator, etc., and few outsource examples from www.rosettacode.org. This is followed by another task, random sampling, (may also be updated) 20 ways to random sampling from a set of data. 
+There are many ways to write a code for a particular task. This project starts with (may be updated) 35 ways to generate Fibonacci sequence in Python, includes using list, tuple, generator, etc. This is followed by another task, random sampling, (may also be updated) 20 ways to random sampling from a set of data. 
 
 *Currently written in Python, Matlab, or C++. (Looking forward for contributions in Java)
 
@@ -80,25 +80,3 @@ Output:
 5. Generate Fibonacci sequence using recursive method and list. The function only append the sequence final two elements, and then check its length, and recall the function with the updated sequence as input until n-terms.
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
 ```
-
-an example from www.rosettacode.org :
-
-```python 
-ex_22 = "22. (the fibGen function from www.rosettacode.org) Using generator \
-to generate Fibonacci numbers, then use list comprehension.";
-def fibo_22(n):
-    def fibGen(n):
-        a, b = 0, 1
-        while n>0:
-           yield a
-           a, b, n = b, a+b, n-1
-    return [i for i in fibGen(n)]
-```
-
-Output:
-
-```python
-22. (the fibGen function from www.rosettacode.org) Using generator to generate Fibonacci numbers, then use list comprehension.
-[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
-```
-
