@@ -193,71 +193,6 @@ void fibo_9(int n){
 
 }
 
-// A function from www.rosettacode.org :
-unsigned int fibo_rosetta(unsigned int n) {
-  if (n == 1) return 0;
-  std::vector<int> v(n);
-  v[1] = 1;
-  transform(v.begin(), v.end()-2, v.begin()+1, v.begin()+2, std::plus<int>());
-  // "v" now contains the Fibonacci sequence from 0 up
-  return v[n-1];
-}
-
-void fibo_10(int n){
-	int f[n];
-	f[0]=0; f[1]=1;
-	
-	std::cout << f[0] << "-" << f[1];
-	
-	for (int index=2; index<n; index++){
-		
-		std::cout << "-" << fibo_rosetta(index+1);
-		
-	}
-	
-}
-
-// A function from www.rosettacode.org :
-inline void fibmul(int* f, int* g)
-{
-  int tmp = f[0]*g[0] + f[1]*g[1];
-  f[1] = f[0]*g[1] + f[1]*(g[0] + g[1]);
-  f[0] = tmp;
-}
-
-// A function from www.rosettacode.org :
-int fibo_rosetta_2(int n)
-{
-  int f[] = { 1, 0 };
-  int g[] = { 0, 1 };
-  while (n > 0)
-  {
-    if (n & 1) // n odd
-    {
-      fibmul(f, g);
-      --n;
-    }
-    else
-    {
-      fibmul(g, g);
-      n >>= 1;
-    }
-  }
-  return f[1];
-}
-
-void fibo_11(int n){
-	int f[n];
-	f[0]=0; f[1]=1;
-	
-	std::cout << f[0] << "-" << f[1];
-	
-	for (int index=2; index<n; index++){
-		
-		std::cout << "-" << fibo_rosetta_2(index);
-	
-	}
-}
 
 int main(){
 	
@@ -298,14 +233,6 @@ int main(){
 	std::string ex_9 = "fibo_9 : Using Matrix identity of Fibonacci numbers, Fn = A^(n) F_init.";
 	std::cout << '\n' << ex_9 << '\n';
 	fibo_9(n);
-	
-	std::string ex_10 = "fibo_10 : Using an outsource function, fibonacci, from www.rosettacode.org, renamed as fibo_rosetta.";
-	std::cout << '\n' << ex_10 << '\n';
-        fibo_10(n);
-	
-	std::string ex_11 = "fibo_11 : Using another different outsource function, fibonacci, from www.rosettacode.org, renamed as fibo_rosetta_2.";
-	std::cout << '\n' << ex_11 << '\n';
-        fibo_11(n);
 		
 	return 0;
 }
