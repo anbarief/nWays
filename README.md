@@ -26,6 +26,10 @@ E-mail: anbarief@live.com
  Random Sampling without Replacement
  [(n_random_sampling.py)](https://github.com/anbarief/nWays/blob/master/n_random_sampling.py)
 
+## T
+ Trigonometric Subplots (Matplotlib)
+ [(n_trig_subplots.py)](https://github.com/anbarief/nWays/blob/master/n_trig_subplots.py)
+ 
 -----
 
 ## A Manifestation
